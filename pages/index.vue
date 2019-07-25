@@ -12,7 +12,7 @@
             <input type="number" class="dice-num" value="6" /><span class="left-padding">面サイコロ</span>
           </div>
           <div>
-            <button>サイコロを振る</button>
+            <button v-on:click="roll">サイコロを振る</button>
           </div>
         </div>
       </div>
@@ -23,6 +23,11 @@
 
 <script>
 export default {
+  methods:{
+    roll() {
+      console.log("Hello Wolrd!");
+    }
+  }
 }
 </script>
 
