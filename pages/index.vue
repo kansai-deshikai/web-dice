@@ -12,11 +12,11 @@
             <input type="number" class="dice-num" v-model="diceDim" /><span class="left-padding">面サイコロ</span>
           </div>
           <div>
-            <button v-on:click="roll">サイコロを振る</button>
+            <button v-on:click="roll">{{diceDim}}面サイコロを振る</button>
           </div>
         </div>
       </div>
-      <div class="dice-output">5</div>
+      <div class="dice-output">{{result}}</div>
     </div>
   </div>
 </template>
@@ -25,12 +25,13 @@
 export default {
   data() {
     return {
-      diceDim: 6
+      diceDim: 6,
+      result: null,
     };
   },
   methods:{
     roll() {
-      console.log(this.diceDim);
+      this.result = Math.floor( Math.random() * this.diceDim );
     }
   }
 }
