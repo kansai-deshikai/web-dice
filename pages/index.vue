@@ -6,8 +6,17 @@
       </h1>
     </div>
     <div class="content">
-      <div class="dice-input"></div>
-      <div class="dice-output"></div>
+      <div class="dice-input">
+        <div class="form">
+          <div class="input-field">
+            <input type="number" class="dice-num" value="6" /><span class="left-padding">面サイコロ</span>
+          </div>
+          <div>
+            <button>サイコロを振る</button>
+          </div>
+        </div>
+      </div>
+      <div class="dice-output">5</div>
     </div>
   </div>
 </template>
@@ -46,6 +55,34 @@ export default {
 .dice-input, .dice-output {
   width: 400px;
   height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice-input .input-field {
+  margin: 1rem;
+}
+
+.dice-num {
+  width: 100px;
+  height: 60px;
+  font-size: 50px;
+  text-align: right;
+}
+
+.left-padding {
+  padding-left: 1rem;
+}
+
+.dice-input button {
+  width: 200px;
+  height: 70px;
+  font-size: 20px;
+}
+
+.dice-output {
   border: 1px solid gray;
+  font-size: 200px;
 }
 </style>
