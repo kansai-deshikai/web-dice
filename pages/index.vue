@@ -9,7 +9,7 @@
       <div class="dice-input">
         <div class="form">
           <div class="input-field">
-            <input type="number" class="dice-num" value="6" /><span class="left-padding">面サイコロ</span>
+            <input type="number" class="dice-num" v-model="diceDim" /><span class="left-padding">面サイコロ</span>
           </div>
           <div>
             <button v-on:click="roll">サイコロを振る</button>
@@ -23,9 +23,14 @@
 
 <script>
 export default {
+  data() {
+    return {
+      diceDim: 6
+    };
+  },
   methods:{
     roll() {
-      console.log("Hello Wolrd!");
+      console.log(this.diceDim);
     }
   }
 }
@@ -83,7 +88,7 @@ export default {
 .dice-input button {
   width: 200px;
   height: 70px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .dice-output {
