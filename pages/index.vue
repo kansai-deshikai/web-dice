@@ -1,9 +1,13 @@
 <template>
   <div class="container">
-    <div>
+    <div class="header">
       <h1 class="title">
         Webサイコロ
       </h1>
+    </div>
+    <div class="content">
+      <div class="dice-input"></div>
+      <div class="dice-output"></div>
     </div>
   </div>
 </template>
@@ -21,6 +25,8 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -31,5 +37,15 @@ export default {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+}
+
+.content {
+  display: flex;
+}
+
+.dice-input, .dice-output {
+  width: 400px;
+  height: 400px;
+  border: 1px solid gray;
 }
 </style>
